@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Sederhana</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form action="/action_page.php" method="get" target="_blank">
+        <label for="depan">Nama Depan:</label><br>
+        <input type="text" id="depan" name="i_name" value="Budi"><br>
+        <label for="n_belakang">Nama Belakang:</label><br>
+        <input type="text" id="n_belakang" name="i_belakan" value="Prawira"><br><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+    <p>Jika anda mengklik tombol "Kirim", data formulir akan dikirim ke halaman bernama "/action_page.php".</p>
+    <p><!-- Pada tampilan web menampilkan data nama depan dan belakang. Apabila kita mengklik kirim maka file tersebut akan
+    dikirim ke /action_page.php. Untuk fitur reset digunakan apabila kita merubah inputan data yang sebelumnya. Contohnya
+    saya memasukkan nama Adi Tampan maka saat direset akan kembali ke Budi Prawira. Untuk method get digunakan untuk 
+    mengambil data atau pencarian sedangkan method post digunakan untuk mengambil data yang bersifat sensitif. Untuk target
+    self digunakan untuk membuka data di jendela yang sama sedangkan target blank dapat membuka data di jendela yang berbeda --></p>
+    
+</body>
+</html>
