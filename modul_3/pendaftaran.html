@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Beranda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Tio Fernando">
+    <meta name="nim" content="243307089">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 600px;
+        }
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+
+    <section>
+        <nav>
+           <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+           </ul>
+        </nav>
+
+        <article>
+            <h1>Pendaftaran</h1>
+            <fieldset>
+                <legend>Informasi Pribadi</legend>
+                <table style="padding: 5px;">
+                    <tr>
+                        <td><label for="Nama">Nama</label></td>
+                        <td><input type="text" name="nama" id="nama"> </td>
+                    </tr>
+                    <tr>
+                        <td><label for="telepon">No. Telepon</label></td>
+                        <td><input type="tel" pattern="[0-9]{4}-[0-9]{6}"  name="telepon" id="telepon"> </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" name="email" id="email"> </td>
+                    </tr>
+                    <tr>
+                        <td><label for="ttl">Tanggal Lahir</label></td>
+                        <td><input type="date" min="1987-01-01" max="1993-01-01"> </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Permintaan Pertemuan</legend>
+                <table>
+                    <tr>
+                        <td><label for="TuP">Tujuan Pertemuan</label></td>
+                        <td><input type="text"> </td>
+                    </tr>
+                    <tr>
+                        <td><label for="TiP">Tingkat Pertemuan</label></td>
+                        <td><input type="range" min="0" max="10"> </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Tanggal">Tanggal</label></td>
+                        <td><input type="date" id="Tanggal" name="Tanggal"> </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Waktu">Waktu</label></td>
+                        <td><input type="time" name="Waktu" id="Waktu" min="17:00" max="21:00"></td>
+                        <script>
+                            document.getElementById("Waktu").addEventListener("change", function() {
+                                let inputTime = this.value;
+                                let minTime = "17:00";
+                                let maxTime = "21:00";
+                            
+                                if (inputTime < minTime) {
+                                    alert("Waktu harus mulai dari 17:00!");
+                                    this.value = minTime; 
+                                } else if (inputTime > maxTime) {
+                                    alert("Waktu tidak boleh lebih dari 21:00!");
+                                    this.value = maxTime; 
+                                }
+                            });
+                            </script>
+                    </tr>
+                </table>
+            </fieldset><br>
+            <button type="submit" value="submit">Submit</button>
+            <p>
+                Kode ini merupakan sebuah kode pembuatan formulir yang ada pada tampilan web.
+                Pengguna juga bisa menginputkan di web secara langsung. Untuk waktu yang ditentukan harus
+                dimulai dari pukul 17:00 sampai 21:00 dan tidak boleh dari 21:00 atau tidak boleh kurang dari 17:00.
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        <p>copyright@TioFernando_243307089</p>
+    </footer>
+    
+</body>
+</html>
