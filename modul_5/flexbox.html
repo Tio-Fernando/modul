@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Flex Box</title>
+    <style>
+        .wadah_flex {
+            /* menjadi fleksibel dengan mengatur property display dengan nilai flex  */
+            display: flex;
+            background: linear-gradient(to right, lightblue, rgb(110, 189, 216));
+            border: 2px solid black;
+            padding: 10px;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+        .wadah_flex > div {
+            background-color: cyan;
+            margin: 10px;
+            padding: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wadah_flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <p>Kesimpulan skenario 1 adalah menambahkan background pada div berwarna biru muda dengan teks berada di sebelah kiri</p>
+    <p>Kesimpulan skenario 2 adalah menambahkan background color pada class wadah flex didalam div sehingga teks di dalam div memiliki warna background sendiri</p>
+    <p>Kesimpulan skenario 3 adalah menambahkan flex direction. Flex direction ini memiliki nilai yang berbeda-beda seperti row,row-reverse, column, dan column-reverse yang dimana setiap nilai tersebut memiliki hasil tampilan yang  berbeda juga</p>
+    <p>Kesimpulan skenario 4 adalah menambahkan flex wrap. Flex wrap ini memiliki nilai nowrap yang objeknya tidak akan mengikuti ukuran layar. Nilai wrap yang objeknya mengikuti ukuran layar dan objeknya dimulai dari angka depan ke belakang,sedangkan wrap-reverse juga mengikuti ukuran layar namun dimulai dari angka belakang ke depan.</p>
+    <p>Kesimpulan skenario 5 adalah menambahkan flex flow. Flex flow ini merupakan gabungan dari flex direction dan flex wrap.</p>
+    <p>Kesimpulan skenario 6 adalah menambahkan justify content. Justify content digunakan untuk mengatur isi content sesuai nilai yang dipilih.</p>
+</body>
+</html>
